@@ -1,0 +1,102 @@
+using System;
+
+public class Program
+{
+
+public class Tri
+{
+private double b,hb;
+public void Input()
+{
+Console.WriteLine("Object of class Triangle");
+Console.WriteLine("Base: ");
+b = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Height: ");
+hb = Convert.ToDouble(Console.ReadLine());
+
+
+}
+public void Output(){
+Console.WriteLine("Object of class Triangle");
+Console.WriteLine("Side: "+ b);
+Console.WriteLine("Height: "+ hb);
+ 
+
+}public double Area(){
+return b*hb/2;
+}
+}
+public class Circle
+{
+private double r;
+public void Input()
+{
+Console.WriteLine("Object of class Circle");
+Console.WriteLine("Radius: ");
+r = Convert.ToDouble(Console.ReadLine());
+
+
+}
+public void Output(){
+Console.WriteLine("Object of class Circle");
+Console.WriteLine("Radius: "+ r);
+ 
+
+}
+public double Area(){
+return r*r*Math.PI;
+}
+}
+public class Rec
+{
+private double h,w;
+public void Input()
+{
+Console.WriteLine("Object of class Rectangle");
+Console.WriteLine("Height: ");
+h = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Widht: ");
+w = Convert.ToDouble(Console.ReadLine());
+
+}
+public void Output(){
+if(h==w){Console.WriteLine("Object of class Rectangle");
+Console.WriteLine("Height: "+ h);
+  Console.WriteLine("Widht: "+ w);}
+{
+Console.WriteLine("Object of class Square");
+Console.WriteLine("Side: "+ h);
+}
+}
+public double Area(){
+return h*w;
+}
+}
+public static void Main()
+{
+
+Console.Write("Figure type. Press 1 for Rectangle, press 2 for Circle, press 3 for Triangle");
+int n = Int32.Parse(Console.ReadLine());
+switch (n){
+case 1:
+Rec rec = new Rec();
+rec.Input();
+rec.Output();
+Console.WriteLine("Area:"+ rec.Area());
+break;
+case 2:
+Circle circle = new Circle();
+circle.Input();
+circle.Output();
+Console.WriteLine("Area:"+ circle.Area());
+break;
+case 3:
+Tri tri = new Tri();
+tri.Input();
+tri.Output();
+Console.WriteLine("Area:"+ tri.Area());
+break;
+
+}
+}
+}
