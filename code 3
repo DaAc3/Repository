@@ -1,0 +1,38 @@
+using System;
+
+namespace ConsoleApp7
+{
+    class Car
+    {
+        private string model;
+        private string color;
+        private string regnumber;
+
+        public string Model { get => model; set => model = value; }
+        public string Color { get => color; set => color = value; }
+        public string Regnumber { get => regnumber; set => regnumber = value; }
+
+        public void Output()
+        {
+            Console.WriteLine("Model: " + Model);
+            Console.WriteLine("Color: " + Color);
+            Console.WriteLine("Registration number: " + Regnumber);
+
+
+        }
+    }
+        class Program
+    {
+        static void Main(string[] args)
+        {
+            Car car = new Car();
+            Console.WriteLine("Model: ");
+            car.Model = Console.ReadLine();
+            Console.WriteLine("Color: ");
+            car.Color = Console.ReadLine();
+            Console.WriteLine("Registration number: ");
+            car.Regnumber = Console.ReadLine();
+            car.Output();
+        }
+    }
+}
