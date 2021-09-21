@@ -1,0 +1,93 @@
+using System;
+
+namespace ConsoleApp1
+{
+    public class Pet
+    {
+        private string name;
+        private int age;
+        public string Name
+        {
+            get => name;
+            set => name = value;
+        }
+        public int Age
+        {
+            get => age;
+            set => age = value;
+        }
+        public virtual void GetSound()
+        {
+        }
+        public virtual void Info()
+        {
+        }
+    }
+    public class Dog : Pet
+    {
+        public override void GetSound()
+        {
+            Console.WriteLine("Bark");
+        }
+        public override void Info()
+        {
+            Console.WriteLine("Dog" + Name + Age);
+        }
+    }
+    public class Cat : Pet
+    {
+        public override void GetSound()
+        {
+            Console.WriteLine("Meow");
+        }
+        public override void Info()
+        {
+
+            Console.WriteLine("Cat" + Name + Age);
+
+        }
+    }
+
+    public class Program
+    {
+        public static void Main()
+        {
+            Pet pet = new Cat();
+            Console.WriteLine("Name :");
+            pet.Name = Console.ReadLine();
+            Console.WriteLine("Age :");
+            pet.Age = Int32.Parse(Console.ReadLine());
+            pet.GetSound();
+            pet.Info();
+            Pet pet2 = new Cat();
+            Console.WriteLine("Name :");
+            pet2.Name = Console.ReadLine();
+            Console.WriteLine("Age :");
+            pet2.Age = Int32.Parse(Console.ReadLine());
+            pet2.GetSound();
+            pet2.Info();
+            Pet pet3 = new Dog();
+            Console.WriteLine("Name :");
+            pet3.Name = Console.ReadLine();
+            Console.WriteLine("Age :");
+            pet3.Age = Int32.Parse(Console.ReadLine());
+            pet3.GetSound();
+            pet3.Info();
+            Pet pet4 = new Dog();
+            Console.WriteLine("Name :");
+            pet4.Name = Console.ReadLine();
+            Console.WriteLine("Age :");
+            pet4.Age = Int32.Parse(Console.ReadLine());
+            pet4.GetSound();
+            pet4.Info();
+            Pet pet5 = new Dog();
+            Console.WriteLine("Name :");
+            pet5.Name = Console.ReadLine();
+            Console.WriteLine("Age :");
+            pet5.Age = Int32.Parse(Console.ReadLine());
+            pet5.GetSound();
+            pet5.Info();
+
+        }
+    }
+}
