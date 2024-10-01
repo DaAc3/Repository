@@ -1,0 +1,46 @@
+.contact {
+    height: calc(100vh - 100px);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.title{
+    font-size: 30px;
+    display: flex;
+}
+.form{
+  width: 70%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+  }
+.input{
+  width: 300px;
+        height: 30px;
+  font-size: 14px;
+  
+        
+        }
+.textarea{
+  width: 300px;
+  height: 200px;
+        font-size: 14px;
+        display: flex;
+}
+.button {
+    width: 150px;
+    height: 30px;
+    color: white;
+    background-color: crimson;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .span{
+    color: green;
+    display: flex;
+  }

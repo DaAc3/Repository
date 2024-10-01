@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+  padding: 50px;
+  justify-content: center;
+  
+}
+.left{
+    flex: 1;
+    align-items: top;
+    margin-top: 21px;
+}
+.right{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+    flex: 4;
+}
+  .cats{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cat{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 5px;
+  }  
